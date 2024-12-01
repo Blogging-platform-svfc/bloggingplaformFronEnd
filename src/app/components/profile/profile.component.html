@@ -1,0 +1,325 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<body>
+<div class="navbar">
+  <a routerLink="/newuser" class="logo">SB</a>
+  <div class="search-bar">
+    <input type="text" placeholder="Student Blog Search">
+    <i class="search-icon fas fa-search"></i>
+  </div>
+  <div class="icons">
+    <div class="icon" routerLink="/message">
+      <i class="fas fa-comment" ></i>
+    </div>
+    <div class="icon" routerLink='/notif'>
+      <i class="fas fa-bell"></i>
+    </div>
+    <div class="sidebar1">
+      <img src="data:image/png;base64,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" alt="Profile Picture">
+      <div class="profile-card1">
+        <img src="data:image/png;base64,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" alt="Profile Picture">
+        <h2>Pauline Soler</h2>
+        <button><i class="fas fa-user"></i> Profile</button>
+        <button routerLink="/home"><i class="fas fa-sign-out-alt" ></i> Log Out</button>
+      </div>
+    </div>
+    <div class="content1">
+    </div>
+  </div>
+</div>
+<div class="nav-separator"></div>
+</body>
+
+
+<!--- profile --->
+<body class="bad">
+<div class="container4">
+  <div class="profile-header4">
+    <img alt="Cover photo" class="cover-photo4" height="200" id="coverImage" src="https://storage.googleapis.com/a1aa/image/J5hOU08sms56A98drjYuMKyo2JaTXUbxsgOnGRK7HPR1Ti9E.jpg" width="1200"/>
+    <img alt="Profile photo" class="profile-photo4" height="100" id="profileImage" src="https://storage.googleapis.com/a1aa/image/f67JlHfVbmmKgEFu3ZTM8j1M1GdjrBO4mLGTYTSYoxXIPJ2TA.jpg" width="100"/>
+    <div class="profile-info4">
+      <h1>
+        Pauline Soler
+      </h1>
+      <p>
+        UI/UX Designer
+      </p>
+    </div>
+    <div class="profile-actions4">
+      <button onclick="document.getElementById('fileInputProfile').click();">
+        Edit Profile
+      </button>
+      <input id="fileInputProfile" onchange="changeProfileImage(event)" style="display: none;" type="file"/>
+      <button onclick="document.getElementById('fileInputCover').click();">
+        Edit Background
+      </button>
+      <input id="fileInputCover" onchange="changeCoverImage(event)" style="display: none;" type="file"/>
+    </div>
+  </div>
+  <div class="main-content4">
+    <div class="about4">
+      <h2>
+        About
+      </h2>
+      <ul>
+        <li>
+          <i class="fas fa-venus">
+          </i>
+          Female
+        </li>
+        <li>
+          <i class="fas fa-birthday-cake">
+          </i>
+          Born June 26, 2001
+        </li>
+        <li>
+          <i class="fas fa-map-marker-alt">
+          </i>
+          Bagong Silang, Caloocan City
+        </li>
+        <li>
+          <i class="fas fa-envelope">
+          </i>
+          Paulinesoler&#64;gmail.com
+        </li>
+      </ul>
+    </div>
+    <div class="posts4">
+      <div class="post4">
+        <div class="post-header4">
+          <img alt="Profile photo" class="pauline-profile4" height="40" src="https://storage.googleapis.com/a1aa/image/f67JlHfVbmmKgEFu3ZTM8j1M1GdjrBO4mLGTYTSYoxXIPJ2TA.jpg" width="40"/>
+          <div>
+            <h3>
+              Pauline Soler
+            </h3>
+            <p>
+              1 min ago
+            </p>
+          </div>
+          <i class="fas fa-ellipsis-h">
+          </i>
+        </div>
+        <div class="post-content4">
+          <img alt="Post image" height="400" src="https://storage.googleapis.com/a1aa/image/nREH0q7fHpVPG6WutlvUgZadMNliAd7WQ2BvOZeyampXPJ2TA.jpg" width="600"/>
+          <p>
+            Charles Deo New Blazer out here... $500!!!!!!
+          </p>
+        </div>
+        <div class="post-footer4">
+          <div onclick="incrementLikes(this)">
+            <i class="fas fa-heart">
+            </i>
+            <span class="like-count4">
+         1,498
+        </span>
+          </div>
+          <div onclick="toggleComments(this)">
+            <i class="fas fa-comment">
+            </i>
+            3,000
+          </div>
+          <div>
+            <i class="fas fa-share">
+            </i>
+            Share
+          </div>
+        </div>
+        <div class="comments4">
+          <div class="comment4">
+            <div class="comment-header4">
+              <img alt="Profile photo of commenter" height="30" src="https://storage.googleapis.com/a1aa/image/ig3g11A8mEryMJLDh5J53xQgOIeOgWJ6RDZMStU2VW7vDF7JA.jpg" width="30"/>
+              <p>
+                User Name
+              </p>
+            </div>
+            <div class="comment-body4">
+              <p>
+                Great post!
+              </p>
+            </div>
+            <div class="comment-footer4">
+              <div onclick="incrementCommentLikes(this)">
+                <i class="fas fa-heart">
+                </i>
+                <span class="comment-like-count4">
+           10
+          </span>
+              </div>
+              <div onclick="replyToComment(this)">
+                <i class="fas fa-reply">
+                </i>
+                Reply
+              </div>
+            </div>
+            <div class="comment-time4">
+              5 mins ago
+            </div>
+          </div>
+          <div class="comment4">
+            <div class="comment-header4">
+              <img alt="Profile photo of commenter" height="30" src="https://storage.googleapis.com/a1aa/image/ig3g11A8mEryMJLDh5J53xQgOIeOgWJ6RDZMStU2VW7vDF7JA.jpg" width="30"/>
+              <p>
+                User Name
+              </p>
+            </div>
+            <div class="comment-body4">
+              <p>
+                I love this!
+              </p>
+            </div>
+            <div class="comment-footer4">
+              <div onclick="incrementCommentLikes(this)">
+                <i class="fas fa-heart">
+                </i>
+                <span class="comment-like-count4">
+           20
+          </span>
+              </div>
+              <div onclick="replyToComment(this)">
+                <i class="fas fa-reply">
+                </i>
+                Reply
+              </div>
+            </div>
+            <div class="comment-time4">
+              10 mins ago
+            </div>
+          </div>
+          <div class="comment4">
+            <div class="comment-header4">
+              <img alt="Profile photo of commenter" height="30" src="https://storage.googleapis.com/a1aa/image/ig3g11A8mEryMJLDh5J53xQgOIeOgWJ6RDZMStU2VW7vDF7JA.jpg" width="30"/>
+              <p>
+                User Name
+              </p>
+            </div>
+            <div class="comment-body4">
+              <p>
+                Amazing!
+              </p>
+            </div>
+            <div class="comment-footer4">
+              <div onclick="incrementCommentLikes(this)">
+                <i class="fas fa-heart">
+                </i>
+                <span class="comment-like-count4">
+           15
+          </span>
+              </div>
+              <div onclick="replyToComment(this)">
+                <i class="fas fa-reply">
+                </i>
+                Reply
+              </div>
+            </div>
+            <div class="comment-time4">
+              15 mins ago
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="suggestions4">
+      <h2>
+        You might know
+      </h2>
+      <ul>
+        <li>
+          <img alt="Profile photo of Eddie Lebanovsky" height="40" src="https://storage.googleapis.com/a1aa/image/tr7UPlgWMUJ1KNfMwV22rfFLTg155PE6liSPudjjA85MPJ2TA.jpg" width="40"/>
+          Eddie Lebanovsky
+        </li>
+        <li>
+          <img alt="Profile photo of Alexey Stive" height="40" src="https://storage.googleapis.com/a1aa/image/k25dEeftdpitfoBfDbStQxdb8Nz4VpegUD0LwlEnxAg15JxeE.jpg" width="40"/>
+          Alexey Stive
+        </li>
+        <li>
+          <img alt="Profile photo of Anton Tkachaw" height="40" src="https://storage.googleapis.com/a1aa/image/fh3kHgtw8WUoUi5jw9xSqJ9oaByaF67K9R6peThVcGFQPJ2TA.jpg" width="40"/>
+          Anton Tkachaw
+        </li>
+      </ul>
+    </div>
+    <div class="activity4">
+      <h2>
+        Active
+      </h2>
+      <ul>
+        <li>
+          <img alt="Profile photo of Shelby Goode" height="40" src="https://storage.googleapis.com/a1aa/image/O3MBsUvccYrpLVRyuGjpBL5NVU3Q9qvO3Q6T4kuQ3sT0Ti9E.jpg" width="40"/>
+          Shelby Goode
+          <span class="online-status4">
+        Online
+       </span>
+        </li>
+        <li>
+          <img alt="Profile photo of Robert Bacins" height="40" src="https://storage.googleapis.com/a1aa/image/ReBTjDej6DmI50F0MxrvZP5ueyx0tMFvGU4itcsKhrDVekYPB.jpg" width="40"/>
+          Robert Bacins
+          <span>
+        Busy
+       </span>
+        </li>
+        <li>
+          <img alt="Profile photo of John Carilo" height="40" src="https://storage.googleapis.com/a1aa/image/kpvVpJCNe8XHDi6IiJOVqbuXOOdYJ1vrgSgDqjQydyvpnE7JA.jpg" width="40"/>
+          John Carilo
+          <span>
+        Online
+       </span>
+        </li>
+        <li>
+          <img alt="Profile photo of Adrienne Watson" height="40" src="https://storage.googleapis.com/a1aa/image/PB3jIimhqxqfdiavxG6kpfOF0Dxn8GKmOJj36fnmm7OpekYPB.jpg" width="40"/>
+          Adrienne Watson
+          <span class="online-status4">
+        Online
+       </span>
+        </li>
+        <li>
+          <img alt="Profile photo of New User" height="40" src="https://storage.googleapis.com/a1aa/image/lH68l8N7Iy6wIBthOTY8fexaMRROiSa7gRkC62ReaonBuSsnA.jpg" width="40"/>
+          New User
+          <span class="online-status4">
+        Online
+       </span>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+<script>
+  function changeProfileImage(event) {
+    const file = event.target.files[0];
+    if (file) {
+      const reader = new FileReader();
+      reader.onload = function(e) {
+        const profileImages = document.querySelectorAll('.pauline-profile');
+        profileImages.forEach(img => {
+          img.src = e.target.result;
+        });
+        document.getElementById('profileImage').src = e.target.result;
+      };
+      reader.readAsDataURL(file);
+    }
+  }
+
+  function changeCoverImage(event) {
+    const file = event.target.files[0];
+    if (file) {
+      const reader = new FileReader();
+      reader.onload = function(e) {
+        document.getElementById('coverImage').src = e.target.result;
+      };
+      reader.readAsDataURL(file);
+    }
+  }
+
+  function incrementLikes(element) {
+    const likeCountSpan = element.querySelector('.like-count');
+    let likeCount = parseInt(likeCountSpan.textContent.replace(/,/g, ''));
+    likeCount++;
+    likeCountSpan.textContent = likeCount.toLocaleString();
+  }
+
+  function toggleComments(element) {
+    const post = element.closest('.post');
+    const comments = post.querySelector('.comments');
+    comments.style.display = comments.style.display === 'none' || comments.style.display === '' ? 'block' : 'none';
+  }
+</script>
+</body>

@@ -1,0 +1,76 @@
+/* header */
+header {
+  background: linear-gradient(to right, #EB1E79, #682D8C);
+  padding: 10px 0;
+  color: white;
+  display: flex;
+  justify-content: center; /* Center the header content horizontally */
+  align-items: center; /* Center the header content vertically */
+  transition: background-color 0.3s ease; /* Add a smooth transition for background color */
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.logo {
+  font-size: 50px;
+  font-weight: bold;
+  text-decoration: none;
+  position: relative;
+  right: 75%;
+  top: 20px;
+}
+
+nav {
+  display: flex;
+  gap: 20px;
+  font-size: 30px;
+  position: relative;
+  left: 70px;
+}
+
+nav a {
+  text-decoration: none;
+  color: white;
+  position: relative;
+  top: 30px;
+  transition: color 0.3s ease; /* Add a smooth transition for text color */
+}
+
+nav a:hover {
+  color: #EB1E79; /* Change text color on hover */
+}
+
+.button {
+  font-size: 30px;
+  background-color: white;
+  color: #682D8C;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  position: relative;
+  left: 70%;
+  top: 20px;
+  transition: background-color 0.3s ease; /* Add a smooth transition for background color */
+}
+
+.button:hover {
+  background-color: #EB1E79; /* Change button background color on hover */
+}
+
+.text1 {
+  color: white;
+  position: relative;
+  bottom: 10px;
+
+}
+/* end of header */
+
+

@@ -1,0 +1,231 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.navbar {
+  background: linear-gradient(to right, #EB1E79, #682D8C);
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none; /* Remove default link underline */
+  color: white; /* Set logo text color */
+  font-weight: bold; /* Make logo text bold */
+  font-size: 50px;
+}
+
+.logo:hover {
+  text-decoration: underline; /* Add underline on hover */
+}
+
+.search-bar {
+  position: relative; /* Position the search bar */
+  width: 300px; /* Adjust width as needed */
+  height: 40px; /* Adjust height as needed */
+  background-color: #fff;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  margin: 0 10px; /* Add margin for spacing */
+  right: 25%;
+}
+
+.search-bar::placeholder {
+  color: #ccc; /* Light gray placeholder text */
+}
+
+.search-bar input {
+  width: 100%;
+  height: 100%;
+  border: none;
+  background: none;
+  padding: 0;
+  font-size: 16px; /* Adjust font size as needed */
+  color: #333; /* Dark gray text color */
+}
+
+.search-bar input:focus {
+  outline: none; /* Remove focus outline */
+}
+
+.search-icon {
+  position: absolute;
+  right: 10px; /* Adjust position as needed */
+  top: 50%;
+  transform: translateY(-50%); /* Center vertically */
+  font-size: 20px; /* Adjust font size as needed */
+  color: #000000; /* Light gray icon color */
+}
+
+.icons {
+  display: flex;
+  align-items: center;
+}
+
+.icons > * {
+  margin-left: 10px; /* Add spacing between icons */
+}
+
+.icon {
+  width: 50px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: #007bff; /* Blue background */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.nav-separator {
+  background-color: #fff;
+  height: 2px;
+  margin: 10px 0; /* Add margin for spacing */
+}
+
+/*    2    */
+.bod{
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  display: flex;
+  height: 100vh;
+  background: linear-gradient(to bottom, #8e2de2, #4a00e0);
+  color: #333;
+}
+.sidebar1 {
+  width: 50px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sidebar1 img {
+  width: 50px;
+  height: 60px;
+  border-radius: 50%;
+  cursor: pointer; /* Make the icon clickable */
+}
+
+.content1 {
+  flex: 1;
+  padding: 20px;
+}
+
+.profile-card1 {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  display: none; /* Hide the dropdown by default */
+  position: absolute; /* Position the dropdown */
+
+}
+
+.profile-card1 img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.profile-card1 h2 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.profile-card1 button {
+  background-color: #ddd; /* Light gray button */
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  margin-top: 10px;
+  cursor: pointer;
+  width: 100%;
+}
+
+.profile-card1 button i {
+  margin-right: 10px;
+}
+
+.sidebar1:hover .profile-card1 {
+  display: block; /* Show the dropdown on hover */
+}
+
+
+/* 2 */
+.bad{
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+}
+.container3 {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 90%;
+  max-width: 800px;
+  padding: 20px;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+.header3 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #e0e0e0;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+}
+.header3 h1 {
+  font-size: 20px;
+  margin: 0;
+}
+.header3 a {
+  color: #007bff;
+  text-decoration: none;
+  font-size: 14px;
+}
+.notification3 {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+.notification3 img.profile3 {
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+}
+.notification3 .content3 {
+  flex: 1;
+}
+.notification3 .content3 p {
+  margin: 0;
+  font-size: 14px;
+}
+.notification3 .content3 .time3 {
+  color: #888;
+  font-size: 12px;
+}
+.notification3 .content3 .image3 {
+  margin: 10px 0;
+}
+.notification3 .content3 .image3 img {
+  width: 100%;
+  border-radius: 5px;
+}
+.notification3 .content3 .comment3 {
+  color: #007bff;
+}

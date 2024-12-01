@@ -1,0 +1,39 @@
+main {
+
+  padding: 20px;
+  text-align: center;
+  position: relative;
+  bottom: 5px;
+}
+
+.content {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.content p {
+  font-size: 25px;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+  color: white;
+}
+
+.content h2 {
+  font-size: 2rem;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  color: white;
+}
+.button2 {
+  font-size: 20px;
+  background-color: white;
+  color: #682D8C;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+
+}
+.button2:hover {
+  background-color: #EB1E79; /* Change button background color on hover */
+}

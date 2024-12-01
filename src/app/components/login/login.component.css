@@ -1,0 +1,75 @@
+body {
+  margin: 0;
+  font-family: sans-serif;
+  background: linear-gradient(to right, #ff66cc, #9966ff);
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.container {
+  background: linear-gradient(to right, #ff66cc, #9966ff);
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  max-width: 400px;
+  text-align: center;
+}
+
+.Loginform {
+  background: linear-gradient(to right, #ff66cc, #9966ff); /* Gradient background */
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.Loginform h1 {
+  margin-bottom: 20px;
+  color: #fff; /* White text color */
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  color: #fff; /* White text color */
+}
+
+.form-group input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+  background-color: #fff; /* White input background */
+  color: #333; /* Dark gray text color */
+}
+
+button {
+  background-color: #3eafff; /* Purple button color */
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #2f80ed; /* Darker purple on hover */
+}
+
+a {
+  color: #3eafff; /* Purple link color */
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
