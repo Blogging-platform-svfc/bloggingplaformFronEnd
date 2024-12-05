@@ -1,3 +1,4 @@
+/* Base Styles */
 body {
   margin: 0;
   padding: 0;
@@ -33,7 +34,6 @@ body {
   padding: 10px;
   border-radius: 5px;
   margin: 0 10px; /* Add margin for spacing */
-  right: 25%;
 }
 
 .search-bar::placeholder {
@@ -89,15 +89,7 @@ body {
   margin: 10px 0; /* Add margin for spacing */
 }
 
-/*    2    */
-.bod{
-  margin: 0;
-  font-family: 'Roboto', sans-serif;
-  display: flex;
-  height: 100vh;
-  background: linear-gradient(to bottom, #8e2de2, #4a00e0);
-  color: #333;
-}
+/* Sidebar Styles */
 .sidebar1 {
   width: 50px;
   padding: 20px;
@@ -124,8 +116,8 @@ body {
   border-radius: 10px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   display: none; /* Hide the dropdown by default */
+  z-index: 20; /* Ensure the profile card appears in front of the sidebar */
   position: absolute; /* Position the dropdown */
-
 }
 
 .profile-card1 img {
@@ -141,7 +133,7 @@ body {
 }
 
 .profile-card1 button {
-  background-color: #ddd; /* Light gray button */
+  background: linear-gradient(to right, #EB1E79, #682D8C);
   border: none;
   padding: 10px 15px;
   border-radius: 5px;
@@ -158,98 +150,97 @@ body {
   display: block; /* Show the dropdown on hover */
 }
 
-/*  2   */
-.post-container {
-  background-color: white;
-  width: 500px;
-  border-radius: 10px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  padding: 20px;
-  position: relative;
-  left: 31%;
-  top: 20%;
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .navbar {
+    padding: 15px;
+    flex-direction: column; /* Stack navbar items vertically */
+    align-items: flex-start;
+  }
+
+  .logo {
+    font-size: 40px; /* Reduce logo font size */
+  }
+
+  .search-bar {
+    width: 250px; /* Adjust search bar width */
+    margin: 10px 0;
+  }
+
+  .sidebar1 {
+    width: 70px; /* Adjust sidebar width */
+  }
+
+  .content1 {
+    padding: 15px; /* Adjust content padding */
+  }
 }
-.post-header {
-  font-size: 20px;
-  font-weight: bold;
-  text-align: center;
-  margin-bottom: 10px;
+
+@media (max-width: 768px) {
+  .navbar {
+    padding: 10px;
+    flex-direction: column; /* Stack navbar items vertically */
+    align-items: center;
+  }
+
+  .logo {
+    font-size: 30px; /* Adjust logo font size for smaller screens */
+  }
+
+  .search-bar {
+    width: 200px; /* Adjust search bar width */
+    margin: 10px 0;
+  }
+
+  .sidebar1 {
+    width: 60px; /* Adjust sidebar width for smaller screens */
+  }
+
+  .content1 {
+    padding: 10px; /* Adjust content padding for smaller screens */
+  }
+
+  .profile-card1 {
+    width: 200px; /* Set a max-width for profile card */
+  }
+
+  .search-icon {
+    font-size: 18px; /* Reduce size of search icon */
+  }
+
+  .icons > * {
+    margin-left: 8px; /* Reduce spacing between icons */
+  }
 }
-.post-user {
-  display: flex;
-  align-items: center;
-  margin-bottom: 10px;
-}
-.post-user img {
-  border-radius: 50%;
-  width: 40px;
-  height: 40px;
-  margin-right: 10px;
-}
-.post-user-info {
-  display: flex;
-  flex-direction: column;
-}
-.post-user-info .name {
-  font-size: 16px;
-  font-weight: bold;
-}
-.post-user-info .privacy {
-  font-size: 12px;
-  color: gray;
-}
-.post-content {
-  font-size: 18px;
-  margin-bottom: 10px;
-}
-.post-content textarea {
-  width: 100%;
-  border: none;
-  resize: none;
-  font-size: 18px;
-  font-family: Arial, sans-serif;
-  outline: none;
-}
-.post-add {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border: 1px solid #ccc;
-  border-radius: 20px;
-  padding: 5px 10px;
-  margin-bottom: 10px;
-}
-.post-add span {
-  font-size: 16px;
-}
-.post-add-icons {
-  display: flex;
-  align-items: center;
-}
-.post-add-icons i {
-  font-size: 20px;
-  margin-left: 10px;
-  cursor: pointer;
-}
-.post-button {
-  display: flex;
-  justify-content: center;
-}
-.post-button button {
-  background-color: #ccc;
-  border: none;
-  border-radius: 5px;
-  padding: 10px 20px;
-  font-size: 16px;
-  cursor: pointer;
-}
-.image-preview {
-  margin-top: 10px;
-  display: none;
-}
-.image-preview img {
-  max-width: 100%;
-  border-radius: 10px;
+
+@media (max-width: 480px) {
+  .navbar {
+    padding: 8px;
+    flex-direction: column; /* Stack navbar items vertically */
+    align-items: center;
+  }
+
+  .logo {
+    font-size: 25px; /* Further reduce logo font size */
+  }
+
+  .search-bar {
+    width: 100%; /* Make search bar full width */
+    margin: 10px 0;
+  }
+
+  .sidebar1 {
+    display: none; /* Hide sidebar on very small screens */
+  }
+
+  .content1 {
+    padding: 10px;
+    width: 100%; /* Ensure content takes up full width */
+  }
+
+  .icons > * {
+    margin-left: 5px; /* Adjust spacing between icons */
+  }
 }
 
 /*   3   */

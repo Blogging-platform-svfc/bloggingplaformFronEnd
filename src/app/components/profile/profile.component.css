@@ -125,6 +125,8 @@ body {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   display: none; /* Hide the dropdown by default */
   position: absolute; /* Position the dropdown */
+  z-index: 20; /* Ensure the profile card appears in front of the sidebar */
+
 
 }
 
@@ -141,7 +143,7 @@ body {
 }
 
 .profile-card1 button {
-  background-color: #ddd; /* Light gray button */
+  background: linear-gradient(to right, #EB1E79, #682D8C);
   border: none;
   padding: 10px 15px;
   border-radius: 5px;

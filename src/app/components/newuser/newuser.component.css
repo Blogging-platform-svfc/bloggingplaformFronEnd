@@ -1,3 +1,4 @@
+/* Base Styles */
 body {
   margin: 0;
   padding: 0;
@@ -33,7 +34,6 @@ body {
   padding: 10px;
   border-radius: 5px;
   margin: 0 10px; /* Add margin for spacing */
-  right: 25%;
 }
 
 .search-bar::placeholder {
@@ -89,7 +89,7 @@ body {
   margin: 10px 0; /* Add margin for spacing */
 }
 
-/*    2    */
+/* Sidebar Styles */
 .sidebar1 {
   width: 50px;
   padding: 20px;
@@ -117,6 +117,7 @@ body {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   display: none; /* Hide the dropdown by default */
   position: absolute; /* Position the dropdown */
+  z-index: 20; /* Ensure the profile card appears in front of the sidebar */
 
 }
 
@@ -133,7 +134,7 @@ body {
 }
 
 .profile-card1 button {
-  background-color: #ddd; /* Light gray button */
+  background: linear-gradient(to right, #EB1E79, #682D8C);
   border: none;
   padding: 10px 15px;
   border-radius: 5px;
@@ -149,288 +150,366 @@ body {
 .sidebar1:hover .profile-card1 {
   display: block; /* Show the dropdown on hover */
 }
-/*   2   */
-.post-container {
-  background-color: white;
-  width: 500px;
-  border-radius: 10px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  padding: 20px;
-  position: relative;
-  left: 31%;
-  top: 20%;
-}
-.post-header {
-  font-size: 20px;
-  font-weight: bold;
-  text-align: center;
-  margin-bottom: 10px;
-}
-.post-user {
-  display: flex;
-  align-items: center;
-  margin-bottom: 10px;
-}
-.post-user img {
-  border-radius: 50%;
-  width: 40px;
-  height: 40px;
-  margin-right: 10px;
-}
-.post-user-info {
-  display: flex;
-  flex-direction: column;
-}
-.post-user-info .name {
-  font-size: 16px;
-  font-weight: bold;
-}
-.post-user-info .privacy {
-  font-size: 12px;
-  color: gray;
-}
-.post-content {
-  font-size: 18px;
-  margin-bottom: 10px;
-}
-.post-content textarea {
-  width: 100%;
-  border: none;
-  resize: none;
-  font-size: 18px;
-  font-family: Arial, sans-serif;
-  outline: none;
-}
-.post-add {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border: 1px solid #ccc;
-  border-radius: 20px;
-  padding: 5px 10px;
-  margin-bottom: 10px;
-}
-.post-add span {
-  font-size: 16px;
-}
-.post-add-icons {
-  display: flex;
-  align-items: center;
-}
-.post-add-icons i {
-  font-size: 20px;
-  margin-left: 10px;
-  cursor: pointer;
-}
-.post-button {
-  display: flex;
-  justify-content: center;
-}
-.post-button button {
-  background-color: #ccc;
-  border: none;
-  border-radius: 5px;
-  padding: 10px 20px;
-  font-size: 16px;
-  cursor: pointer;
-}
-.image-preview {
-  margin-top: 10px;
-  display: none;
-}
-.image-preview img {
-  max-width: 100%;
-  border-radius: 10px;
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .navbar {
+    padding: 15px;
+    flex-direction: column; /* Stack navbar items vertically */
+    align-items: flex-start;
+  }
+
+  .logo {
+    font-size: 40px; /* Reduce logo font size */
+  }
+
+  .search-bar {
+    width: 250px; /* Adjust search bar width */
+    margin: 10px 0;
+  }
+
+  .sidebar1 {
+    width: 70px; /* Adjust sidebar width */
+  }
+
+  .content1 {
+    padding: 15px; /* Adjust content padding */
+  }
 }
 
-/*   3   */
-.navbar1 {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 10px;
-  position: relative;
+@media (max-width: 768px) {
+  .navbar {
+    padding: 10px;
+    flex-direction: column; /* Stack navbar items vertically */
+    align-items: center;
+  }
 
+  .logo {
+    font-size: 30px; /* Adjust logo font size for smaller screens */
+  }
+
+  .search-bar {
+    width: 200px; /* Adjust search bar width */
+    margin: 10px 0;
+  }
+
+  .sidebar1 {
+    width: 60px; /* Adjust sidebar width for smaller screens */
+  }
+
+  .content1 {
+    padding: 10px; /* Adjust content padding for smaller screens */
+  }
+
+  .profile-card1 {
+    width: 200px; /* Set a max-width for profile card */
+  }
+
+  .search-icon {
+    font-size: 18px; /* Reduce size of search icon */
+  }
+
+  .icons > * {
+    margin-left: 8px; /* Reduce spacing between icons */
+  }
 }
-.navbar1 a {
-  margin: 0 10px;
+
+@media (max-width: 480px) {
+  .navbar {
+    padding: 8px;
+    flex-direction: column; /* Stack navbar items vertically */
+    align-items: center;
+  }
+
+  .logo {
+    font-size: 25px; /* Further reduce logo font size */
+  }
+
+  .search-bar {
+    width: 100%; /* Make search bar full width */
+    margin: 10px 0;
+  }
+
+  .sidebar1 {
+    display: none; /* Hide sidebar on very small screens */
+  }
+
+  .content1 {
+    padding: 10px;
+    width: 100%; /* Ensure content takes up full width */
+  }
+
+  .icons > * {
+    margin-left: 5px; /* Adjust spacing between icons */
+  }
 }
-.navbar1 img {
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-}
+
+
 /*   3  */
-.container2 {
-  width: 60%;
-  margin: 20px auto;
-  background-color: white;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  padding: 20px;
+/* General Styles */
+/* General Styles */
+body {
+  font-family: 'Sans Serif', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
 }
-.header2 {
+
+/* Toolbar */
+.toolbar {
   display: flex;
   align-items: center;
+  gap: 8px;
+  background-color: #f8f9fa;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px 4px 0 0;
+  flex-wrap: wrap; /* Allow wrapping on smaller screens */
 }
-.header2 img {
-  border-radius: 50%;
-  width: 50px;
-  height: 50px;
-  margin-right: 10px;
-}
-.header2 .info2 {
-  flex-grow: 1;
-}
-.header2 .info2 h2 {
-  margin: 0;
-  font-size: 18px;
-}
-.header2 .info2 p {
-  margin: 0;
-  color: gray;
-  font-size: 14px;
-}
-.header2 .tags2 {
-  text-align: right;
-}
-.header2 .tags2 span {
-  background-color: #f0f0f0;
-  padding: 5px 10px;
-  border-radius: 5px;
-  font-size: 12px;
-  margin-left: 5px;
-}
-.content2 {
-  margin-top: 20px;
-}
-.content2 h3 {
-  margin: 0;
-  font-size: 20px;
-}
-.content2 p {
-  color: gray;
-  font-size: 14px;
-}
-.content2 img {
-  width: 100%;
-  border-radius: 10px;
-  margin-top: 10px;
-}
-.actions2 {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 20px;
-  border-top: 1px solid #f0f0f0;
-  padding-top: 10px;
-}
-.actions2 .left2 {
-  display: flex;
-  align-items: center;
-}
-.actions2 .left2 span {
-  margin-right: 20px;
-  display: flex;
-  align-items: center;
+
+.toolbar button,
+.toolbar select {
+  padding: 5px 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background: #fff;
   cursor: pointer;
 }
-.actions2 .left2 span i {
-  margin-right: 5px;
+
+.toolbar button:hover,
+.toolbar select:hover {
+  background-color: #e6e6e6;
 }
-.actions2 .right2 {
-  display: flex;
-  align-items: center;
-}
-.actions2 .right2 span {
-  margin-left: 20px;
-  display: flex;
-  align-items: center;
-}
-.actions2 .right2 span i {
-  margin-right: 5px;
-}
-.comment-box2 {
-  margin-top: 20px;
-  border: 1px solid #000000;
-  border-radius: 10px;
+
+/* Editor Section */
+.editor {
+  border: 1px solid #ddd;
+  background-color: #885d91;
+  border-radius: 0 0 4px 4px;
   padding: 10px;
+  min-height: 150px;
+  font-family: 'Sans Serif', sans-serif;
+  white-space: pre-wrap;
+  overflow-wrap: break-word;
+  outline: none;
+  margin-bottom: 20px; /* Space below editor */
 }
-.comment-box2 .tools2 {
+
+textarea {
+  width: 100%;
+  padding: 8px;
+  margin-top: 10px;
+}
+
+/* Post Header */
+.post-header {
   display: flex;
-  justify-content: space-between;
+  align-items: center;
   margin-bottom: 10px;
 }
-.comment-box2 .tools2 i {
-  margin-right: 10px;
-  cursor: pointer;
-}
-.comment-box2 .tools2 .submit2 {
-  background-color: #00ff00;
-  color: white;
-  padding: 5px 10px;
-  border-radius: 5px;
-  cursor: pointer;
-}
-.comment-box2 textarea {
-  width: 97%;
-  border: 1px solid #000000;
-  border-radius: 5px;
-  padding: 10px;
-  resize: none;
-}
-.emoji-picker2 {
-  display: none;
-  position: absolute;
-  background-color: white;
-  border: 1px solid #f0f0f0;
-  border-radius: 5px;
-  padding: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-.emoji-picker2 span {
-  cursor: pointer;
-  font-size: 20px;
-  margin: 5px;
-}
-.comments2 {
-  margin-top: 20px;
-}
-.comments2 h4 {
-  margin: 0;
-  font-size: 16px;
-  cursor: pointer;
-}
-.comment2 {
-  display: flex;
-  margin-top: 10px;
-}
-.comment2 img {
-  border-radius: 50%;
+
+.profile-pic {
   width: 40px;
   height: 40px;
+  border-radius: 50%;
   margin-right: 10px;
 }
-.comment2 .text2 {
-  flex-grow: 1;
+
+.user-name {
+  font-weight: bold;
+  font-size: 16px;
 }
-.comment2 .text2 p {
-  margin: 0;
+
+/* Post Content */
+.post-item {
+  margin-bottom: 20px;
 }
-.comment2 .text2 .info2 {
-  color: gray;
-  font-size: 12px;
-}
-.comment2 .text2 .actions2 {
+
+.post-interactions {
   display: flex;
-  align-items: center;
-  margin-top: 5px;
+  justify-content: space-between;
+  margin-top: 10px;
 }
-.comment2 .text2 .actions2 span {
-  margin-right: 10px;
-  display: flex;
-  align-items: center;
+
+.post-interactions span,
+.post-interactions button {
   cursor: pointer;
 }
-.comment2 .text2 .actions2 span i {
-  margin-right: 5px;
+
+/* User Info inside Toolbar */
+.user-info {
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+  margin-bottom: 10px; /* Space between user info and toolbar buttons */
+}
+
+.user-name {
+  font-weight: bold;
+  font-size: 16px;
+  color: #333;
+}
+
+/* Custom Video Upload Icon */
+.video-upload-icon {
+  font-size: 1.5em;
+  cursor: pointer;
+  margin: 0 10px;
+  display: inline-block;
+}
+
+.video-upload-icon:hover {
+  color: #0056b3;
+  transition: color 0.3s ease;
+}
+
+/* Post Button */
+.post-button {
+  margin: 0 auto; /* Center it horizontally */
+}
+
+/* Responsive Design */
+
+/* For Tablets and Smaller Screens */
+@media (max-width: 768px) {
+  .toolbar {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .toolbar button,
+  .toolbar select {
+    width: 100%; /* Make buttons and selects full-width */
+    margin-bottom: 10px;
+  }
+
+  .editor {
+    padding: 15px;
+    min-height: 120px;
+  }
+
+  .post-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .profile-pic {
+    margin-bottom: 10px; /* Add space between profile pic and name */
+  }
+
+  .post-interactions {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .post-item {
+    margin-bottom: 15px;
+  }
+
+  .post-button {
+    width: 100%; /* Full-width button on small screens */
+  }
+}
+
+/* For Small Mobile Screens */
+@media (max-width: 480px) {
+  .toolbar {
+    padding: 8px;
+    gap: 5px;
+  }
+
+  .toolbar button,
+  .toolbar select {
+    padding: 8px;
+    font-size: 14px; /* Smaller font size */
+  }
+
+  .editor {
+    padding: 10px;
+    min-height: 100px;
+  }
+
+  .post-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .profile-pic {
+    width: 35px;
+    height: 35px;
+  }
+
+  .user-name {
+    font-size: 14px; /* Smaller text for user name */
+  }
+
+  .post-interactions {
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .post-item {
+    padding: 15px;
+    margin-top: 10px;
+  }
+
+  .post-button {
+    font-size: 14px;
+    padding: 12px;
+  }
+
+  .video-upload-icon {
+    font-size: 1.3em;
+  }
+}
+
+/* For Extra Small Screens */
+@media (max-width: 320px) {
+  .toolbar {
+    padding: 6px;
+    gap: 5px;
+  }
+
+  .toolbar button,
+  .toolbar select {
+    padding: 6px;
+    font-size: 12px; /* Even smaller buttons */
+  }
+
+  .editor {
+    padding: 8px;
+    min-height: 80px;
+  }
+
+  .post-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .profile-pic {
+    width: 30px;
+    height: 30px;
+  }
+
+  .user-name {
+    font-size: 12px; /* Further reduction in font size */
+  }
+
+  .post-interactions {
+    flex-direction: column;
+    gap: 3px;
+  }
+
+  .post-item {
+    padding: 10px;
+    margin-top: 8px;
+  }
+
+  .post-button {
+    padding: 10px;
+  }
+
+  .video-upload-icon {
+    font-size: 1.2em;
+  }
 }

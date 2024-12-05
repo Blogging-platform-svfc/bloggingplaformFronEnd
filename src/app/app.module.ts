@@ -11,13 +11,8 @@ import {BlogsComponent} from "./components/blogs/blogs.component";
 import {LoginComponent} from "./components/login/login.component";
 import {SingupComponent} from "./components/singup/singup.component";
 import {NewuserComponent} from "./components/newuser/newuser.component";
-import {MessgeComponent} from "./components/messge/messge.component";
-import {NotificationComponent} from "./components/notification/notification.component";
 import {ProfileComponent} from "./components/profile/profile.component";
-import {VideoComponent} from "./components/video/video.component";
-import {FriendrequestComponent} from "./components/friendrequest/friendrequest.component";
 import {NoteComponent} from "./components/note/note.component";
-
 
 
 const  routes: Routes = [
@@ -28,11 +23,7 @@ const  routes: Routes = [
   { path: 'login', component: LoginComponent},
   { path: 'signup', component: SingupComponent},
   { path: 'newuser', component: NewuserComponent},
-  { path: 'message', component: MessgeComponent},
-  { path: 'notif', component: NotificationComponent},
   { path: 'prof', component: ProfileComponent},
-  { path: 'video', component: VideoComponent},
-  { path: 'friend', component: FriendrequestComponent},
   { path: 'note', component: NoteComponent},
 
 
@@ -49,6 +40,7 @@ const  routes: Routes = [
     BrowserAnimationsModule,
     RouterModule.forRoot(routes, {enableTracing: true}),
     FormsModule,
+
   ],
   declarations: [
     HomeComponent,
@@ -57,11 +49,7 @@ const  routes: Routes = [
     LoginComponent,
     SingupComponent,
     NewuserComponent,
-    MessgeComponent,
-    NotificationComponent,
     ProfileComponent,
-    VideoComponent,
-    FriendrequestComponent,
     NoteComponent,
     AppComponent
   ],
